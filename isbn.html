@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Validasi ISBN</title>
+    <link rel="stylesheet" href="isbn.css" />
+  </head>
+  <body>
+    <div class="container-utama">
+      <div class="i">
+        <div class="wadah-ketik">
+          <h3 class="teks-bergerak">Cek Validasi ISBN</h3>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <label class="label"> Masukkan Nomor ISBN</label>
+      <input
+        type="text"
+        id="inputNomer"
+        placeholder="123456789101"
+        maxlength="13"
+      />
+
+      <div class="hasil sembunyi" id="box-hasil">
+        <div>Jumlah Digit: <strong id="out-digit">0</strong></div>
+        <div>Total Hitungan: <strong id="out-total">-</strong></div>
+        <div>Sisa (Mod) 10: <strong id="out-mod">-</strong></div>
+        <div class="teks-status-utama">
+          Status: <span id="out-status">-</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="by">
+      <h5>code by: Apiq Afqari</h5>
+    </div>
+    <script src="isbn.js"></script>
+  </body>
+</html>

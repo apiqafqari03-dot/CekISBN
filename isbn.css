@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://www.unja.ac.id/wp-content/uploads/2025/02/d002a013-0c57-4830-a743-401143b9c80c.jpg);
+
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-utama {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  margin-top: 15%;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.wadah-ketik {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.i {
+  background-color: lightblue;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.teks-bergerak {
+  border: none;
+  padding: 5px;
+  font-family: monospace;
+  font-size: 20px;
+  overflow: hidden;
+  border-right: 3px solid black;
+  white-space: nowrap;
+  margin: 0;
+  animation: ketik 4s steps(26) infinite alternate, kedip 0.5s step-end infinite;
+  width: 19ch;
+}
+
+@keyframes ketik {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19ch;
+  }
+}
+
+@keyframes kedip {
+  50% {
+    border-color: transparent;
+  }
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hasil {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-left: 5px solid #ccc;
+  border-radius: 8px;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.hasil.valid {
+  background-color: #e8f5e9;
+  border-left-color: #2e7d32;
+}
+
+.hasil.invalid {
+  background-color: #ffebee;
+  border-left-color: #c62828;
+}
+
+.teks-status-utama {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.sembunyi {
+  display: none !important;
+}
+
+.by {
+  position: absolute;
+  bottom: 20px;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
